@@ -1,0 +1,84 @@
+.gallery {
+	box-sizing: border-box;
+
+	@include elem('layout') {
+		@include grid-container;
+		@include border(true, true, true, true);
+		width: 100%;
+		background: $jet;		
+	}
+
+	@include elem('col'){
+
+		@include grid-column(1, $gallery-layout-grid);
+
+		@include grid-media($gallery-grid--tablet-up) {
+			@include grid-column(6);
+		}
+
+		@include mod('one') {
+			@include border(false, true, false, false);
+		}		
+
+		@include mod('two') {
+			@include border(false, false, false, true);
+			// padding-right: 1px;		
+		}					
+
+	}	
+
+
+
+	@include elem('item') {
+
+
+		@include mod('one') {
+			@include border(false, false, true, false);
+			box-sizing: border-box;
+		}
+
+		@include mod('two') {
+			// @include border(false, false, true, false);
+			box-sizing: border-box;
+		}
+
+		@include mod('three') {
+			@include border(false, false, true, false);
+			box-sizing: border-box;	
+		}
+
+		@include mod('four') {
+			// @include border(false, false, true, true);
+			box-sizing: border-box;
+			// padding-bottom: 1px;
+		}							
+	}
+
+	@include elem('image-wrapper') {
+		overflow: hidden;
+
+		@include mod('one') {
+			// @include border(true, false, true, false);			
+		}
+
+		// border: solid 1px $oil;
+		@include mod('two') {
+			// @include border(false, false, true, false);			
+		}
+
+
+		@include mod('three') {
+			// @include border(true, false, true, true);				
+		}
+
+		@include mod('four') {
+			// @include border(false, false, false, true);			
+		}
+	}
+
+	@include elem('img') {
+		@include img-responsive();
+		@include scale(1.3);
+		min-width: 100%;
+	}
+}

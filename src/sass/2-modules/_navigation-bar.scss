@@ -1,0 +1,70 @@
+.navigation-header {
+	width: 100%;
+	background: $vapor;
+	min-height: 75px;
+	border-bottom: solid 1px $gainsboro;
+}
+
+.navbar {
+  @include grid-container;	
+	// width: 80%;
+	// margin: 0 auto;
+	// display: flex;
+	// justify-content: space-between;
+
+		// max-width: 100%;
+		// margin: 0 auto;  		
+
+		// @include grid-media($section-layout-grid--tablet-up) {
+		// 	max-width: 85%;
+		// 	margin: 0 auto;
+		// }	
+
+	@include elem('logo') {
+  	padding-top: $base-spacing / 2; 		
+		// border: dotted 1px $base;
+  	@include grid-column(1);
+		img {
+			width: 50px;
+			height: auto;
+		}
+	}
+
+	@include elem('heading') {
+  	@include grid-column(3);
+  	padding-top: $base-spacing;  			
+	}
+
+	@include elem('nav') {	
+  	@include grid-column(4);
+  	@include grid-push(3);
+  	padding-top: $base-spacing;
+	}
+
+	@include elem('menulist') {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	@include elem('menu-toggle') {
+		z-index: 9999;
+		position: fixed;
+		top: 1em;
+		right: 1em;
+		i {
+			border-radius: 50%;
+			padding: $base-spacing / 4;
+			background: $base;
+			
+			&:hover {
+				background: $aluminum;
+				cursor: pointer;
+		}
+
+		}
+
+	}		
+
+
+}

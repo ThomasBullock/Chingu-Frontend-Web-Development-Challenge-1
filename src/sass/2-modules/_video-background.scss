@@ -1,0 +1,27 @@
+
+.video-container {
+	// height: 100vh;
+	position: relative;
+	margin-bottom: $base-spacing;
+}
+
+	.video-background {
+	  // background: linear-gradient(45deg#ffa949,transparent 90%),
+	  //             linear-gradient(0deg, $red, transparent 30%);
+	  background-size: cover;	      
+		min-width: 100%;
+		min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    opacity: .5;
+	}
+
+	.video-backdrop {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		min-height: 100%;
+		z-index: -200;
+		background: linear-gradient(180deg, $twitter-blue, $black);
+	}

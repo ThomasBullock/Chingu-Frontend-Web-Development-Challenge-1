@@ -1,0 +1,74 @@
+.features {
+	padding-top: $base-spacing;
+	padding-bottom: $base-spacing; 
+
+	@include elem('layout') {
+		@include grid-container;
+		width: 100%;
+		// background: $smoke;		
+	}
+
+	@include elem('col'){
+
+		@include grid-column(1, $gallery-layout-grid);
+
+		@include grid-media($gallery-grid--tablet-up) {
+			@include grid-column(6);
+		}
+
+		@include mod('one') {
+
+		}		
+
+		@include mod('two') {
+		
+		}					
+
+	}	
+
+	@include elem('image-wrapper') {
+		width: 100%;
+		position: relative;
+
+		img {
+			@include img-responsive();
+			margin: 0 auto;
+		}
+	}
+
+	@include elem('icon') {
+		border-radius: 50%;
+		background: $base;
+		position: absolute;
+		color: $oil;
+		padding: $base-spacing / 2;
+  	transition: all .4s ease-in-out;
+
+		&:hover {
+			background: $twitter-blue;
+		}
+
+		@include mod('1') {
+			top: $base-spacing * 4;
+			left: $base-spacing;
+		}
+
+		@include mod('2') {
+			bottom: $base-spacing;
+			left: $base-spacing * 4;						
+		}		
+	}
+
+	@include elem('content') {
+		padding: $base-spacing;
+		text-align: center;
+
+		@include grid-media($gallery-grid--tablet-up) {
+			text-align: left;			
+		}		
+	}
+
+	@include elem('list') {
+		margin-bottom: $base-spacing;
+	}
+}
