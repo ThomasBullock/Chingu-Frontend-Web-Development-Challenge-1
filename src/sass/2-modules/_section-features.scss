@@ -41,7 +41,11 @@
 		background: $base;
 		position: absolute;
 		color: $oil;
-		padding: $base-spacing / 2;
+		padding-left: 12px;
+		padding-right: 12px;
+		padding-top: 5px;  
+		padding-bottom: 5px;  
+		// padding: 5px;
   	transition: all .4s ease-in-out;
 
 		&:hover {
@@ -49,14 +53,30 @@
 		}
 
 		@include mod('1') {
-			top: $base-spacing * 4;
-			left: $base-spacing;
+			bottom: 35%;
+			left: 10%;
 		}
 
 		@include mod('2') {
-			bottom: $base-spacing;
-			left: $base-spacing * 4;						
+			bottom: 16%;
+			left: 29%;						
 		}		
+
+		@include mod('3') {
+			top: 33%;
+			left: 33%;						
+		}	
+
+		@include mod('4') {
+			bottom: 40%;
+			right: 30%;						
+		}	
+
+		@include mod('5') {
+			top: 15%;
+			right: 15%;						
+		}						
+
 	}
 
 	@include elem('content') {

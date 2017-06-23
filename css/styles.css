@@ -626,16 +626,28 @@ iframe {
     background: #AAAAAA;
     position: absolute;
     color: #333333;
-    padding: 0.75em;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     transition: all .4s ease-in-out; }
     .features__icon:hover {
       background: #1da1f2; }
     .features__icon--1 {
-      top: 6em;
-      left: 1.5em; }
+      bottom: 35%;
+      left: 10%; }
     .features__icon--2 {
-      bottom: 1.5em;
-      left: 6em; }
+      bottom: 16%;
+      left: 29%; }
+    .features__icon--3 {
+      top: 33%;
+      left: 33%; }
+    .features__icon--4 {
+      bottom: 40%;
+      right: 30%; }
+    .features__icon--5 {
+      top: 15%;
+      right: 15%; }
   .features__content {
     padding: 1.5em;
     text-align: center; }
