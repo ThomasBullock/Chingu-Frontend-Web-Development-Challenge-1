@@ -9,7 +9,6 @@
 .engineered {
 
 	background: $jet;
-	color: $smoke;
 	padding-top: $base-spacing;
 	padding-bottom: $base-spacing; 
 
@@ -62,6 +61,7 @@
 		}  	
 
   	font-size: modular-scale(2);
+ 	color: $smoke; 	
   	text-align: center;	
   	display: flex;
   	justify-content: center;
@@ -75,7 +75,9 @@
   	@include grid-column(1, $section-layout-grid);
 
   	font-size: modular-scale(2);		
-	
+	font-family: 'Lato', sans-serif;
+	color: $silver;
+	// font-weight: 400;	
 		@include grid-media($section-layout-grid--tablet-up) {
 			padding-top: $base-spacing;
 		}
@@ -84,7 +86,10 @@
 	}
 
 	@include elem('paragraph') {
-  	@include grid-column(1, $section-layout-grid);
+  		@include grid-column(1, $section-layout-grid);
+
+  		// font-family: 'Lato', sans-serif;
+  		color: $base;
 
 		@include grid-media($section-layout-grid--tablet-up) {
 			@include grid-column(6);

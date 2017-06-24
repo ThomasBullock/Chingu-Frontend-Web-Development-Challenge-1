@@ -1,27 +1,50 @@
+.hero {
 
-.video-container {
-	// height: 100vh;
-	position: relative;
-	margin-bottom: $base-spacing;
-}
-
-	.video-background {
-	  // background: linear-gradient(45deg#ffa949,transparent 90%),
-	  //             linear-gradient(0deg, $red, transparent 30%);
-	  background-size: cover;	      
-		min-width: 100%;
-		min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    opacity: .5;
+	@include elem('container') {
+		// height: 100vh;
+		position: relative;
+		margin-bottom: $base-spacing;		
 	}
 
-	.video-backdrop {
+	@include elem('heading') {
+		font-size: modular-scale(4);
+		font-family: 'Roboto', sans-serif;
+		color: transparentize($smoke, .1);
+		text-shadow: 0 1px 0 transparentize($oil, .1);
+		@include center(40%);
+	}
+
+	@include elem('background') {
+		background-size: cover;	      
+		min-width: 100%;
+		min-height: 100%;
+	    width: auto;
+	    height: auto;
+	    z-index: -100;
+	    opacity: .5;
+	}
+
+	@include elem('backdrop') {
 		position: absolute;
 		top: 0;
 		width: 100%;
 		min-height: 100%;
 		z-index: -200;
-		background: linear-gradient(180deg, $twitter-blue, $black);
+		background: linear-gradient(180deg, $twitter-blue, $black);		
+	}
+
+}
+
+.video-container {
+
+}
+
+	.video-background {
+	  // background: linear-gradient(45deg#ffa949,transparent 90%),
+	  //             linear-gradient(0deg, $red, transparent 30%);
+
+	}
+
+	.video-backdrop {
+
 	}

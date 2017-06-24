@@ -1,6 +1,16 @@
 /* ================================= 
   Base Styles
 ==================================== */
+body {
+	font-family: $Lato;
+	font-weight: 300;
+}
+
+
+h1, h2 {
+	font-family: $heading-font-family;
+} 
+
 
 a {
   text-decoration: none;

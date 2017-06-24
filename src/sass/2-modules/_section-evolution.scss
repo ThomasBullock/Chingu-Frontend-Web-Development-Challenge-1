@@ -28,8 +28,8 @@
 	// }
 
 	@include elem('title-mobile') {
+		font-family: 'Roboto', sans-serif;
 		@include grid-column(1, $section-layout-grid);
-
 
 		@include grid-media($section-layout-grid--tablet-up) {
 			display: none;
@@ -42,13 +42,13 @@
 
 
 	@include elem('heading') {
-
-		@include mod('tablet-up') {
+		font-family: 'Roboto', sans-serif;
+		@include mod('tablet-up') {	
 			display: none;
 
-		@include grid-media($section-layout-grid--tablet-up) {
-			display: block;
-		}
+			@include grid-media($section-layout-grid--tablet-up) {
+				display: block;
+			}
 		}
 
 
@@ -56,7 +56,6 @@
 
 	@include elem('copy') {
 		@include grid-column(1, $section-layout-grid);
-
 		display: table;
 
 		@include grid-media($section-layout-grid--tablet-up) {
@@ -81,13 +80,13 @@
 	}
 
 	@include elem('story') {
-
+		color: $jumbo;
+		font-weight: 300;
 	}	
 
 	@include elem('images') {
 		// position: relative;		
 		@include grid-column(1, $section-layout-grid);
-
 
 		@include grid-media($section-layout-grid--tablet-up) {
 			@include grid-column(7);

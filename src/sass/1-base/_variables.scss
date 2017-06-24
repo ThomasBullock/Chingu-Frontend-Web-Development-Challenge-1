@@ -13,12 +13,10 @@ $phone: new-breakpoint(min-width 320px max-width 767px 12);
 @import "fonts";
 
 @include Lato;
-@include Montserrat;
-
+@include Roboto;
 
 $base-font-family: $Lato;
-$heading-font-family: $Montserrat;
-
+$heading-font-family: $Roboto;
 
 $section-layout-grid: (
 	columns: 1,
