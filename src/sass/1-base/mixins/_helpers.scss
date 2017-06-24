@@ -9,6 +9,15 @@
 	box-shadow: 0 2px 1px $color;	
 }
 
+@mixin center($vertical: 50%) {
+	text-align: center;
+	z-index: 100;
+    position: absolute;
+    left: 50%;
+    top: $vertical;
+    transform: translate(-50%, -50%);	
+}
+
 @mixin border($top, $right, $bottom, $left, $width: 1px, $color: $black ) {
 	@if $top == true {
 		border-top: solid $width $color;
