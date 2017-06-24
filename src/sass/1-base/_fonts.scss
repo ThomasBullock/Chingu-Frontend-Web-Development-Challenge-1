@@ -24,3 +24,15 @@ $Raleway: 'Raleway', sans-serif;
 @mixin Raleway {
 	@import url('https://fonts.googleapis.com/css?family=Raleway');
 }
+
+$Roboto: 'Roboto', sans-serif;
+
+@mixin Roboto {
+	@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+}
+
+$Roboto-Slab: 'Roboto Slab', serif;
+
+@mixin Roboto-Slab {
+	@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+}
