@@ -1,13 +1,10 @@
 .evolution {
-	// @include section();
+
 	padding-top: $base-spacing;
 	padding-bottom: $base-spacing; 
 
 	@include elem('layout') {
 		@include grid-container;
-  	// @include grid-visual;	
-
-  	// min-height: 400px;	
 			max-width: 100%;
 			margin: $base-spacing auto;  	
 
@@ -19,23 +16,12 @@
  		} 		  		
 	}
 
-	// .container {
-	// 	@include grid-container;
- //  	// @include grid-visual;
- //  	display: flex;
-
- //  	min-height: 400px;				
-	// }
-
 	@include elem('title-mobile') {
 		font-family: 'Roboto', sans-serif;
 		@include grid-column(1, $section-layout-grid);
 
 		@include grid-media($section-layout-grid--tablet-up) {
-			display: none;
-			// @include grid-column(6);
-			// @include grid-shift(6);
-					
+			display: none;				
 		}
 	}
 
@@ -67,31 +53,24 @@
 
 	@include elem('paragraph') {
 
-		// flex: 1 1 100%;		
-
 		@include grid-media($section-layout-grid--tablet-up) {
-			// @include grid-shift(6);
 
 		  display: table-cell;
 		  vertical-align: middle;
-			// transform: translateY(50%);
 						
 		}					
 	}
 
 	@include elem('story') {
-		color: $jumbo;
+		color: $muted;
 		font-weight: 300;
 	}	
 
 	@include elem('images') {
-		// position: relative;		
 		@include grid-column(1, $section-layout-grid);
 
 		@include grid-media($section-layout-grid--tablet-up) {
-			@include grid-column(7);
-			// margin-top: $base-spacing * -4;
-			
+			@include grid-column(7);		
 		}
 	}
 
@@ -118,9 +97,7 @@
 	@include elem('pcb') {
 		width: 33%;
 		@include position( absolute, 50% null null 50%);
-		// text-align: center;
-		// margin-left: auto;
-		// margin-right: auto;
+
 		transform: translate(-50%, -50%);
 		img {
 			@include img-responsive();

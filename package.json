@@ -11,7 +11,7 @@
   "author": "Thomas Bullock @ Mot Web Dev",
   "license": "MIT",
   "devDependencies": {
-    "babel-preset-env": "^1.1.8",
+    "babel-preset-env": "^1.5.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
@@ -20,7 +20,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^1.9.1",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "smooth-scroll": "^11.1.0"
   },
   "dependencies": {
     "del": "^2.2.2",

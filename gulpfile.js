@@ -18,6 +18,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task("concatScripts", function(){
 		return gulp.src([
+			'src/javascript/smooth-scroll.js',
 			'src/javascript/main.js'])
 		.pipe(maps.init())
 		.pipe(concat('app.js'))
@@ -63,7 +64,7 @@ gulp.task('watchFiles', function() {
 
 gulp.task('build', ["minifyScripts", "minifyCss"], function(){
 	console.log("Remember to change index.html links to minified versions");
-	return gulp.src(["js/app.min.js", "index.html", "img/**", "fonts/**"] , { base: "./"})
+	return gulp.src(["js/app.min.js", "index.html", "img/**", "fonts/**", "video/**"] , { base: "./"})
 			.pipe(gulp.dest('dist'));
 });
 

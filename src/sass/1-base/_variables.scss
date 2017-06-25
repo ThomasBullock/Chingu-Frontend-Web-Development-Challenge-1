@@ -94,6 +94,7 @@ $jet           : #222222 !default;
 $ebony         : #111111 !default;
 $black         : #000000 !default;
 
+$muted: $jumbo;
 $blue: #1565c0;
 $dark-gray: #333;
 $medium-gray: #999;
@@ -114,7 +115,7 @@ $secondary-background-color: tint($base-border-color, 75%);
 /// social media colors ////
 $facebook-blue     : #3b5998;
 $bandcamp-blue     : #629aa9;
-$twitter-blue      : #1da1f2;
+$twitter-blue      : #2db1f4;
 $skype-blue        : #00aff0;      
 $soundcloud-orange : #ff8800;
 $spotify-green     : #2ebd59;
@@ -136,5 +137,7 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+$base-transition: all .4s ease-in-out;
+$long-transition: all .8s ease-in-out;
 
 

@@ -39,6 +39,10 @@
 		width: 100%;
 		text-align: center;
 		padding: $base-spacing;
+
+		a {
+			font-size: modular-scale(2);
+		}
 	}
 
 

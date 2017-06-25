@@ -7,24 +7,23 @@
 
 .navbar {
   @include grid-container;	
-	// width: 80%;
-	// margin: 0 auto;
-	// display: flex;
-	// justify-content: space-between;
 
-		// max-width: 100%;
-		// margin: 0 auto;  		
+  @include elem('brand') {
+  	@include grid-column(1, $section-layout-grid);
+  	margin-left: 0;
 
-		// @include grid-media($section-layout-grid--tablet-up) {
-		// 	max-width: 85%;
-		// 	margin: 0 auto;
-		// }	
+  	@include grid-media($section-layout-grid--tablet-up) {
+			@include grid-column(6);  		
+  	}
+  }
 
 	@include elem('logo') {
-  	padding-top: $base-spacing / 2; 		
+  	padding-top: $base-spacing / 2;
+  	display: inline-block;  	 		
 		// border: dotted 1px $base;
   	@include grid-column(1);
 		img {
+			min-width: 50px;
 			width: 50px;
 			height: auto;
 		}
@@ -32,18 +31,35 @@
 
 	@include elem('heading') {
   	@include grid-column(3);
-  	padding-top: $base-spacing;  			
+  	display: inline-block;
+  	padding-top: $base-spacing;
+  	margin-left: $base-spacing * 2;
+
+		@include grid-media($section-layout-grid--tablet-up) {
+  		margin-left: $base-spacing * 2;			
+		}
+
 	}
 
-	@include elem('nav') {	
-  	@include grid-column(4);
-  	@include grid-push(3);
-  	padding-top: $base-spacing;
+	@include elem('nav') {
+		display: none;
+
+		@include grid-media($section-layout-grid--tablet-up) {
+			display: block;
+			@include grid-column(6);					
+	  	padding-top: $base-spacing;
+  	}
 	}
 
 	@include elem('menulist') {
+		// padding-left: $base-spacing;
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
+		margin-right: $base-spacing * 1.5;
+
+		li {
+			margin-right: $base-spacing * 2;
+		}
 
 	}
 
@@ -53,14 +69,15 @@
 		top: 1em;
 		right: 1em;
 		i {
+			max-width: 42px;
 			border-radius: 50%;
 			padding: $base-spacing / 4;
 			background: $base;
 			
 			&:hover {
-				background: $aluminum;
+				background: $twitter-blue;
 				cursor: pointer;
-		}
+			}
 
 		}
 

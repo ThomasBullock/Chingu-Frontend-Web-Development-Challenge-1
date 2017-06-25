@@ -14,6 +14,11 @@ h1, h2 {
 
 a {
   text-decoration: none;
+  color: $oil;
+
+  &:hover {
+  	color: $twitter-blue;
+  }
 }
 
 ul {
@@ -22,4 +27,8 @@ ul {
 
 li {
   list-style: none;
+}
+
+i {
+	transition: all .4s ease-in-out;
 }

@@ -41,6 +41,13 @@
 	}		
 }
 
+@mixin subheading() {
+		font-weight: 300;
+		color: $muted;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;			
+}
+
 @mixin rounded-box($radius : 4px, $color: $smoke, $border-color: $iron) {
 		border-radius: $radius;
 		background: $color;

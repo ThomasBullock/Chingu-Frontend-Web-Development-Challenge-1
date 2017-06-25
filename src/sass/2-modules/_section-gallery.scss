@@ -17,45 +17,51 @@
 		}
 
 		@include mod('one') {
-			@include border(false, true, false, false);
+
+			@include grid-media($gallery-grid--tablet-up) {			
+				@include border(false, true, false, false);
+			}
 		}		
 
 		@include mod('two') {
-			@include border(false, false, false, true);
+			@include grid-media($gallery-grid--tablet-up) {
+				@include border(false, false, false, true);
+			}
 			// padding-right: 1px;		
 		}					
 
 	}	
 
 
-
 	@include elem('item') {
-
 
 		@include mod('one') {
 			@include border(false, false, true, false);
-			box-sizing: border-box;
 		}
 
 		@include mod('two') {
 			// @include border(false, false, true, false);
-			box-sizing: border-box;
+
 		}
 
 		@include mod('three') {
-			@include border(false, false, true, false);
-			box-sizing: border-box;	
+			@include border(true, false, true, false);
+
+			@include grid-media($gallery-grid--tablet-up) {
+				@include border(false, false, true, false);
+			}
 		}
 
 		@include mod('four') {
 			// @include border(false, false, true, true);
-			box-sizing: border-box;
+
 			// padding-bottom: 1px;
 		}							
 	}
 
 	@include elem('image-wrapper') {
 		overflow: hidden;
+		position: relative;
 
 		@include mod('one') {
 			// @include border(true, false, true, false);			
@@ -75,6 +81,32 @@
 			// @include border(false, false, false, true);			
 		}
 	}
+
+	@include elem('caption') {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		background: transparent;
+		color: transparent;
+		border-bottom: 1px solid transparent;	
+		text-align: center;
+
+		// background: transparentize($oil, .9);
+		// color: transparentize($silver, .9);		
+		transition: $long-transition;
+		// padding: $base-spacing;		
+
+		span {
+			font-size: modular-scale(2);
+		}
+
+		@include mod('hover') {
+			background: transparentize($oil, .3);
+			color: transparentize($silver, .1);
+			border-bottom: 1px solid transparentize($oil, .1);				
+			padding: $base-spacing / 2;			
+		}
+	}	
 
 	@include elem('img') {
 		@include img-responsive();

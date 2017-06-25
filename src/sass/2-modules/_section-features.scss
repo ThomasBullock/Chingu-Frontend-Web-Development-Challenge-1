@@ -1,5 +1,5 @@
 .features {
-	padding-top: $base-spacing;
+	padding-top: $base-spacing * 2;
 	padding-bottom: $base-spacing; 
 
 	@include elem('layout') {
@@ -32,7 +32,7 @@
 
 		img {
 			@include img-responsive();
-			margin: 0 auto;
+			margin: $base-spacing auto 0;
 		}
 	}
 
@@ -53,12 +53,12 @@
 		}
 
 		@include mod('1') {
-			bottom: 35%;
-			left: 10%;
+			bottom: 39%;
+			left: 12%;
 		}
 
 		@include mod('2') {
-			bottom: 16%;
+			bottom: 17%;
 			left: 29%;						
 		}		
 
@@ -68,13 +68,13 @@
 		}	
 
 		@include mod('4') {
-			bottom: 40%;
+			bottom: 42%;
 			right: 30%;						
 		}	
 
 		@include mod('5') {
-			top: 15%;
-			right: 15%;						
+			top: 2%;
+			right: 14%;						
 		}						
 
 	}
@@ -84,11 +84,36 @@
 		text-align: center;
 
 		@include grid-media($gallery-grid--tablet-up) {
-			text-align: left;			
+			text-align: left;
+			margin-top: $base-spacing / 1.5;			
 		}		
 	}
 
+	@include elem('heading') {
+		font-size: modular-scale(2);
+		color: $tuatara;
+	}
+
+	@include elem('subheading') {
+		@include subheading();
+	}	
+
 	@include elem('list') {
 		margin-bottom: $base-spacing;
+		font-weight: 100;
 	}
+
+	@include elem('list-item') {
+			color: $muted;
+
+
+		@include mod('highlight') {
+  		transition: all .4s ease-in-out;
+			color: $twitter-blue;	
+		}
+	}
+
+	@include elem('cta') {
+		background: $twitter-blue;
+	}	
 }
